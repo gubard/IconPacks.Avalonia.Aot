@@ -1,5 +1,4 @@
-﻿using Avalonia.Media;
-using IconPacks.Avalonia.Core;
+﻿using IconPacks.Avalonia.Core;
 using IconPacks.Avalonia.Core.Converter;
 
 namespace IconPacks.Avalonia.MaterialDesign.Converter
