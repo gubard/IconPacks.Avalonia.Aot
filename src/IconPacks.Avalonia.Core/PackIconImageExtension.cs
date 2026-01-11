@@ -31,7 +31,7 @@ namespace IconPacks.Avalonia.Core
         /// <param name="iconKind">The icon kind to draw.</param>
         protected virtual ScaleTransform GetScaleTransform(object iconKind)
         {
-            return new ScaleTransform(1, 1);
+            return new(1, 1);
         }
 
         /// <summary>

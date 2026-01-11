@@ -66,8 +66,8 @@ namespace IconPacks.Avalonia.Core
             if (this.innerGrid != null)
             {
                 var transformGroup = new TransformGroup();
-                this.scaleTransform = new ScaleTransform();
-                this.rotateTransform = new RotateTransform();
+                this.scaleTransform = new();
+                this.rotateTransform = new();
                 transformGroup.Children.Add(scaleTransform);
                 transformGroup.Children.Add(rotateTransform);
                 this.innerGrid.RenderTransform = transformGroup;
@@ -218,14 +218,14 @@ namespace IconPacks.Avalonia.Core
             {
                 Children =
                 {
-                    new KeyFrame()
+                    new()
                     {
-                        Cue = new Cue(0),
+                        Cue = new(0),
                         Setters = { new Setter(RotateTransform.AngleProperty, 0d) }
                     },
-                    new KeyFrame()
+                    new()
                     {
-                        Cue = new Cue(1),
+                        Cue = new(1),
                         Setters = { new Setter(RotateTransform.AngleProperty, 360d) }
                     }
                 }
@@ -242,7 +242,7 @@ namespace IconPacks.Avalonia.Core
         {
             if (this.spinAnimation != null)
             {
-                this.spinAnimation.IterationCount = new IterationCount(0);
+                this.spinAnimation.IterationCount = new(0);
                 this.spinAnimationTask?.Dispose();
                 this.spinAnimationTask = null;
             }

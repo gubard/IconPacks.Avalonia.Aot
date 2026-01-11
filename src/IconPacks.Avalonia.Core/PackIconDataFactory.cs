@@ -16,12 +16,12 @@ namespace IconPacks.Avalonia.Core
 
         static PackIconDataFactory()
         {
-            DataIndex = new Lazy<ReadOnlyDictionary<TEnum, string>>(() => new ReadOnlyDictionary<TEnum, string>(Create()));
+            DataIndex = new(() => new(Create()));
         }
 
         public static IDictionary<TEnum, string> Create()
         {
-            using var iconJsonStream = AssetLoader.Open(new Uri($"avares://{typeof(TEnum).Assembly.GetName().Name}/Resources/Icons.json"));
+            using var iconJsonStream = AssetLoader.Open(new($"avares://{typeof(TEnum).Assembly.GetName().Name}/Resources/Icons.json"));
             var stringDictionary = System.Text.Json.JsonSerializer.Deserialize(iconJsonStream, EnumDictionaryGenerationContext.Default.DictionaryStringString) ?? [];
 #if NETSTANDARD2_0
             return stringDictionary.ToDictionary(kvp => (TEnum)Enum.Parse(typeof(TEnum), kvp.Key), kvp => kvp.Value);
