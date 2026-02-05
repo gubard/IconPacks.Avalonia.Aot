@@ -1,5 +1,4 @@
 <Project>
-
     <PropertyGroup>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <IncludeSymbols>false</IncludeSymbols>
@@ -26,5 +25,4 @@
     <ItemGroup>
         <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageRoot)))" Condition="'$(NuGetPackageRoot)' != ''" />
     </ItemGroup>
-
 </Project>

@@ -1,14 +1,10 @@
 <Project>
-
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
-
+        <TargetFramework>net10.0</TargetFramework>
         <AnalysisLevel>latest</AnalysisLevel>
         <LangVersion>latest</LangVersion>
         <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
-
         <Nullable>disable</Nullable>
-
         <GenerateLibraryLayout>true</GenerateLibraryLayout>
     </PropertyGroup>
 
@@ -21,5 +17,4 @@
     <Import Project="..\build\SignAssembly.props" />
     <Import Project="..\build\SourceLink.props" />
     <Import Project="..\build\SharedVersion.props" />
-
 </Project>
