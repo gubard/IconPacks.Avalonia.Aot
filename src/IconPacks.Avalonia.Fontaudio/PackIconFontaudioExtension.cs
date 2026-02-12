@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Fontaudio
 {
     public class FontaudioExtension : BasePackIconExtension
     {
-        public FontaudioExtension()
-        {
-        }
+        public FontaudioExtension() { }
 
         public FontaudioExtension(PackIconFontaudioKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconFontaudioKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconFontaudioKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

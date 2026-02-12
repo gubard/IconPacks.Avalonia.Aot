@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.Lucide
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconLucideKind> KindProperty
-            = AvaloniaProperty.Register<PackIconLucide, PackIconLucideKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconLucideKind> KindProperty = AvaloniaProperty.Register<PackIconLucide, PackIconLucideKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

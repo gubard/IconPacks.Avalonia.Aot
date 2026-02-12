@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.SimpleIcons
 {
     public class SimpleIconsExtension : BasePackIconExtension
     {
-        public SimpleIconsExtension()
-        {
-        }
+        public SimpleIconsExtension() { }
 
         public SimpleIconsExtension(PackIconSimpleIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconSimpleIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconSimpleIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

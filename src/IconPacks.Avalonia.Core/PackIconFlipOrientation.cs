@@ -23,6 +23,6 @@
         /// <summary>
         /// Flip the icon vertical and horizontal
         /// </summary>
-        Both
+        Both,
     }
 }

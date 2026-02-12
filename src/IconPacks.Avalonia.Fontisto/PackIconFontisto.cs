@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.Fontisto
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconFontistoKind> KindProperty
-            = AvaloniaProperty.Register<PackIconFontisto, PackIconFontistoKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconFontistoKind> KindProperty = AvaloniaProperty.Register<PackIconFontisto, PackIconFontistoKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

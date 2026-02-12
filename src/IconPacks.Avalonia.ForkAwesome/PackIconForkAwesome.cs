@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.ForkAwesome
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconForkAwesomeKind> KindProperty
-            = AvaloniaProperty.Register<PackIconForkAwesome, PackIconForkAwesomeKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconForkAwesomeKind> KindProperty = AvaloniaProperty.Register<PackIconForkAwesome, PackIconForkAwesomeKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

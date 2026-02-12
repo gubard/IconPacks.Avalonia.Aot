@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.FontAwesome6
 {
     public class FontAwesome6ImageExtension : BasePackIconImageExtension
     {
-        public FontAwesome6ImageExtension()
-        {
-        }
+        public FontAwesome6ImageExtension() { }
 
         public FontAwesome6ImageExtension(PackIconFontAwesome6Kind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconFontAwesome6Kind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconFontAwesome6Kind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

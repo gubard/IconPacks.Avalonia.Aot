@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Typicons
 {
     public class TypiconsExtension : BasePackIconExtension
     {
-        public TypiconsExtension()
-        {
-        }
+        public TypiconsExtension() { }
 
         public TypiconsExtension(PackIconTypiconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconTypiconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconTypiconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

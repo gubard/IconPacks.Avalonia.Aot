@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.Fontaudio
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconFontaudioKind> KindProperty
-            = AvaloniaProperty.Register<PackIconFontaudio, PackIconFontaudioKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconFontaudioKind> KindProperty = AvaloniaProperty.Register<PackIconFontaudio, PackIconFontaudioKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

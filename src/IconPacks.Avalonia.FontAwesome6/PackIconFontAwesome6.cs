@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.FontAwesome6
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconFontAwesome6Kind> KindProperty
-            = AvaloniaProperty.Register<PackIconFontAwesome6, PackIconFontAwesome6Kind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconFontAwesome6Kind> KindProperty = AvaloniaProperty.Register<PackIconFontAwesome6, PackIconFontAwesome6Kind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

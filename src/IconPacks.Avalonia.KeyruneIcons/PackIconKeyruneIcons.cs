@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.KeyruneIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconKeyruneIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconKeyruneIcons, PackIconKeyruneIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconKeyruneIconsKind> KindProperty = AvaloniaProperty.Register<PackIconKeyruneIcons, PackIconKeyruneIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

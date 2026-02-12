@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.Unicons
 {
     public class UniconsImageExtension : BasePackIconImageExtension
     {
-        public UniconsImageExtension()
-        {
-        }
+        public UniconsImageExtension() { }
 
         public UniconsImageExtension(PackIconUniconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconUniconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconUniconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

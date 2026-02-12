@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.FileIcons
 {
     public class FileIconsExtension : BasePackIconExtension
     {
-        public FileIconsExtension()
-        {
-        }
+        public FileIconsExtension() { }
 
         public FileIconsExtension(PackIconFileIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconFileIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconFileIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

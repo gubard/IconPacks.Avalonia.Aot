@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.Zondicons
 {
     public class ZondiconsImageExtension : BasePackIconImageExtension
     {
-        public ZondiconsImageExtension()
-        {
-        }
+        public ZondiconsImageExtension() { }
 
         public ZondiconsImageExtension(PackIconZondiconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconZondiconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconZondiconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

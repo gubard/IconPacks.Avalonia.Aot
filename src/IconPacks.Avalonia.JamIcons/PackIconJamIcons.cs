@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.JamIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconJamIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconJamIcons, PackIconJamIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconJamIconsKind> KindProperty = AvaloniaProperty.Register<PackIconJamIcons, PackIconJamIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

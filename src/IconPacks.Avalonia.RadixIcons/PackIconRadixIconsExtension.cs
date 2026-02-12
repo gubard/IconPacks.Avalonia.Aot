@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.RadixIcons
 {
     public class RadixIconsExtension : BasePackIconExtension
     {
-        public RadixIconsExtension()
-        {
-        }
+        public RadixIconsExtension() { }
 
         public RadixIconsExtension(PackIconRadixIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconRadixIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconRadixIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

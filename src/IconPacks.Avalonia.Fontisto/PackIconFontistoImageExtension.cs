@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.Fontisto
 {
     public class FontistoImageExtension : BasePackIconImageExtension
     {
-        public FontistoImageExtension()
-        {
-        }
+        public FontistoImageExtension() { }
 
         public FontistoImageExtension(PackIconFontistoKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconFontistoKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconFontistoKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.Microns
 {
     public class MicronsImageExtension : BasePackIconImageExtension
     {
-        public MicronsImageExtension()
-        {
-        }
+        public MicronsImageExtension() { }
 
         public MicronsImageExtension(PackIconMicronsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconMicronsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconMicronsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

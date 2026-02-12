@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.PhosphorIcons
 {
     public class PhosphorIconsExtension : BasePackIconExtension
     {
-        public PhosphorIconsExtension()
-        {
-        }
+        public PhosphorIconsExtension() { }
 
         public PhosphorIconsExtension(PackIconPhosphorIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconPhosphorIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconPhosphorIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

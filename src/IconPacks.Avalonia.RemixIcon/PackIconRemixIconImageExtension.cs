@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.RemixIcon
 {
     public class RemixIconImageExtension : BasePackIconImageExtension
     {
-        public RemixIconImageExtension()
-        {
-        }
+        public RemixIconImageExtension() { }
 
         public RemixIconImageExtension(PackIconRemixIconKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconRemixIconKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconRemixIconKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

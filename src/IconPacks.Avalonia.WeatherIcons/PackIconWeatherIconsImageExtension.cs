@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.WeatherIcons
 {
     public class WeatherIconsImageExtension : BasePackIconImageExtension
     {
-        public WeatherIconsImageExtension()
-        {
-        }
+        public WeatherIconsImageExtension() { }
 
         public WeatherIconsImageExtension(PackIconWeatherIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconWeatherIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconWeatherIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

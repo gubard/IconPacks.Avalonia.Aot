@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.ForkAwesome
 {
     public class ForkAwesomeExtension : BasePackIconExtension
     {
-        public ForkAwesomeExtension()
-        {
-        }
+        public ForkAwesomeExtension() { }
 
         public ForkAwesomeExtension(PackIconForkAwesomeKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconForkAwesomeKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconForkAwesomeKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

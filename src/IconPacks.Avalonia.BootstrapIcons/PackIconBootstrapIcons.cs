@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.BootstrapIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconBootstrapIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconBootstrapIcons, PackIconBootstrapIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconBootstrapIconsKind> KindProperty = AvaloniaProperty.Register<PackIconBootstrapIcons, PackIconBootstrapIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

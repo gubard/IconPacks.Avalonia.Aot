@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.WeatherIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconWeatherIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconWeatherIcons, PackIconWeatherIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconWeatherIconsKind> KindProperty = AvaloniaProperty.Register<PackIconWeatherIcons, PackIconWeatherIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

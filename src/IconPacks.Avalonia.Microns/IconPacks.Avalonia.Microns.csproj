@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <DefineConstants>$(DefineConstants);MICRONS</DefineConstants>
         <IconsName>Microns</IconsName>
@@ -18,5 +17,4 @@
     <ItemGroup>
         <AvaloniaResource Include="Resources/**" />
     </ItemGroup>
-
 </Project>

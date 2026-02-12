@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.MynaUIIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconMynaUIIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconMynaUIIcons, PackIconMynaUIIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconMynaUIIconsKind> KindProperty = AvaloniaProperty.Register<PackIconMynaUIIcons, PackIconMynaUIIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

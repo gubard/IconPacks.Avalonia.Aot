@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Coolicons
 {
     public class CooliconsExtension : BasePackIconExtension
     {
-        public CooliconsExtension()
-        {
-        }
+        public CooliconsExtension() { }
 
         public CooliconsExtension(PackIconCooliconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconCooliconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconCooliconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

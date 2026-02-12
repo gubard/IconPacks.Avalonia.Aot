@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.JamIcons
 {
     public class JamIconsImageExtension : BasePackIconImageExtension
     {
-        public JamIconsImageExtension()
-        {
-        }
+        public JamIconsImageExtension() { }
 
         public JamIconsImageExtension(PackIconJamIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconJamIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconJamIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.Entypo
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconEntypoKind> KindProperty
-            = AvaloniaProperty.Register<PackIconEntypo, PackIconEntypoKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconEntypoKind> KindProperty = AvaloniaProperty.Register<PackIconEntypo, PackIconEntypoKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

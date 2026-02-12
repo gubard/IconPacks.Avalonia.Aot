@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.PhosphorIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconPhosphorIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconPhosphorIcons, PackIconPhosphorIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconPhosphorIconsKind> KindProperty = AvaloniaProperty.Register<PackIconPhosphorIcons, PackIconPhosphorIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

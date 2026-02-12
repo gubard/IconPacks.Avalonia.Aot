@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.PixelartIcons
 {
     public class PixelartIconsImageExtension : BasePackIconImageExtension
     {
-        public PixelartIconsImageExtension()
-        {
-        }
+        public PixelartIconsImageExtension() { }
 
         public PixelartIconsImageExtension(PackIconPixelartIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconPixelartIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconPixelartIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

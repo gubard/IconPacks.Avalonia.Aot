@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.CircumIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconCircumIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconCircumIcons, PackIconCircumIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconCircumIconsKind> KindProperty = AvaloniaProperty.Register<PackIconCircumIcons, PackIconCircumIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

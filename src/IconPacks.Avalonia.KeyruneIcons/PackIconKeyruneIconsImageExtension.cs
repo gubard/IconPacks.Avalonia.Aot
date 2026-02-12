@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.KeyruneIcons
 {
     public class KeyruneIconsImageExtension : BasePackIconImageExtension
     {
-        public KeyruneIconsImageExtension()
-        {
-        }
+        public KeyruneIconsImageExtension() { }
 
         public KeyruneIconsImageExtension(PackIconKeyruneIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconKeyruneIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconKeyruneIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

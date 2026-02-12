@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.FeatherIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconFeatherIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconFeatherIcons, PackIconFeatherIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconFeatherIconsKind> KindProperty = AvaloniaProperty.Register<PackIconFeatherIcons, PackIconFeatherIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

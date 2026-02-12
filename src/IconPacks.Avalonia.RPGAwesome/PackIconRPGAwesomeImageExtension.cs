@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.RPGAwesome
 {
     public class RPGAwesomeImageExtension : BasePackIconImageExtension
     {
-        public RPGAwesomeImageExtension()
-        {
-        }
+        public RPGAwesomeImageExtension() { }
 
         public RPGAwesomeImageExtension(PackIconRPGAwesomeKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconRPGAwesomeKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconRPGAwesomeKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

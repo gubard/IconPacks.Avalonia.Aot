@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.FeatherIcons
 {
     public class FeatherIconsExtension : BasePackIconExtension
     {
-        public FeatherIconsExtension()
-        {
-        }
+        public FeatherIconsExtension() { }
 
         public FeatherIconsExtension(PackIconFeatherIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconFeatherIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconFeatherIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.RadixIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconRadixIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconRadixIcons, PackIconRadixIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconRadixIconsKind> KindProperty = AvaloniaProperty.Register<PackIconRadixIcons, PackIconRadixIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

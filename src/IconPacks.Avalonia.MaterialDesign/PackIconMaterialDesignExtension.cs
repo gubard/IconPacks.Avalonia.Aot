@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.MaterialDesign
 {
     public class MaterialDesignExtension : BasePackIconExtension
     {
-        public MaterialDesignExtension()
-        {
-        }
+        public MaterialDesignExtension() { }
 
         public MaterialDesignExtension(PackIconMaterialDesignKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconMaterialDesignKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconMaterialDesignKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

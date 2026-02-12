@@ -1,21 +1,21 @@
 ﻿using System;
 using Avalonia.Data;
 using Avalonia.Markup.Xaml;
-using IconPacks.Avalonia.Core;
 using IconPacks.Avalonia.BootstrapIcons;
-using IconPacks.Avalonia.BoxIcons2;
 using IconPacks.Avalonia.BoxIcons;
+using IconPacks.Avalonia.BoxIcons2;
 using IconPacks.Avalonia.CircumIcons;
 using IconPacks.Avalonia.Codicons;
 using IconPacks.Avalonia.Coolicons;
+using IconPacks.Avalonia.Core;
 using IconPacks.Avalonia.Entypo;
 using IconPacks.Avalonia.EvaIcons;
 using IconPacks.Avalonia.FeatherIcons;
 using IconPacks.Avalonia.FileIcons;
 using IconPacks.Avalonia.Fontaudio;
+using IconPacks.Avalonia.FontAwesome;
 using IconPacks.Avalonia.FontAwesome5;
 using IconPacks.Avalonia.FontAwesome6;
-using IconPacks.Avalonia.FontAwesome;
 using IconPacks.Avalonia.Fontisto;
 using IconPacks.Avalonia.ForkAwesome;
 using IconPacks.Avalonia.GameIcons;
@@ -24,8 +24,8 @@ using IconPacks.Avalonia.JamIcons;
 using IconPacks.Avalonia.KeyruneIcons;
 using IconPacks.Avalonia.Lucide;
 using IconPacks.Avalonia.Material;
-using IconPacks.Avalonia.MaterialLight;
 using IconPacks.Avalonia.MaterialDesign;
+using IconPacks.Avalonia.MaterialLight;
 using IconPacks.Avalonia.MemoryIcons;
 using IconPacks.Avalonia.Microns;
 using IconPacks.Avalonia.MingCuteIcons;
@@ -49,16 +49,15 @@ namespace IconPacks.Avalonia
 {
     public class PackIconExtension : BasePackIconExtension
     {
-        public PackIconExtension()
-        {
-        }
+        public PackIconExtension() { }
 
         public PackIconExtension(Enum kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public Enum Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public Enum Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
@@ -106,7 +105,7 @@ namespace IconPacks.Avalonia
                 PackIconVaadinIconsKind kind => this.GetPackIcon<PackIconVaadinIcons, PackIconVaadinIconsKind>(kind),
                 PackIconWeatherIconsKind kind => this.GetPackIcon<PackIconWeatherIcons, PackIconWeatherIconsKind>(kind),
                 PackIconZondiconsKind kind => this.GetPackIcon<PackIconZondicons, PackIconZondiconsKind>(kind),
-                _ => BindingNotification.UnsetValue
+                _ => BindingNotification.UnsetValue,
             };
         }
     }

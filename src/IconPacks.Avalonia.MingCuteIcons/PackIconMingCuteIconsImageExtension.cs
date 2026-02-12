@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.MingCuteIcons
 {
     public class MingCuteIconsImageExtension : BasePackIconImageExtension
     {
-        public MingCuteIconsImageExtension()
-        {
-        }
+        public MingCuteIconsImageExtension() { }
 
         public MingCuteIconsImageExtension(PackIconMingCuteIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconMingCuteIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconMingCuteIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

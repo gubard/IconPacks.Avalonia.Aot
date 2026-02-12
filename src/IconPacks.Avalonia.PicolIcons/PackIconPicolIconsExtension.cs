@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.PicolIcons
 {
     public class PicolIconsExtension : BasePackIconExtension
     {
-        public PicolIconsExtension()
-        {
-        }
+        public PicolIconsExtension() { }
 
         public PicolIconsExtension(PackIconPicolIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconPicolIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconPicolIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

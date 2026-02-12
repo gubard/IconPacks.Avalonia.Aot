@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.BootstrapIcons
 {
     public class BootstrapIconsImageExtension : BasePackIconImageExtension
     {
-        public BootstrapIconsImageExtension()
-        {
-        }
+        public BootstrapIconsImageExtension() { }
 
         public BootstrapIconsImageExtension(PackIconBootstrapIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconBootstrapIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconBootstrapIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <DefineConstants>$(DefineConstants);MODERN</DefineConstants>
         <IconsName>Modern</IconsName>
@@ -18,5 +17,4 @@
     <ItemGroup>
         <AvaloniaResource Include="Resources/**" />
     </ItemGroup>
-
 </Project>

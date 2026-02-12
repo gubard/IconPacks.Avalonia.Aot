@@ -45,11 +45,7 @@ namespace IconPacks.Avalonia.Core
 
         private bool CanSpin()
         {
-            return this.Spin
-                   && this.IsVisible
-                   && this.SpinDuration > 0
-                   && this.Opacity > 0
-                   && this.SpinEasingFunction != null;
+            return this.Spin && this.IsVisible && this.SpinDuration > 0 && this.Opacity > 0 && this.SpinEasingFunction != null;
         }
 
         private Grid innerGrid;
@@ -104,12 +100,14 @@ namespace IconPacks.Avalonia.Core
                 }
             }
 
-            // Update Spin-Animation as needed 
-            if (change.Property == SpinProperty
+            // Update Spin-Animation as needed
+            if (
+                change.Property == SpinProperty
                 || change.Property == IsVisibleProperty
                 || change.Property == SpinDurationProperty
                 || change.Property == OpacityProperty
-                || change.Property == SpinEasingFunctionProperty)
+                || change.Property == SpinEasingFunctionProperty
+            )
             {
                 this.StopSpinAnimation();
 
@@ -124,12 +122,8 @@ namespace IconPacks.Avalonia.Core
         {
             if (this.scaleTransform != null)
             {
-                var scaleX = flipOrientation is PackIconFlipOrientation.Horizontal or PackIconFlipOrientation.Both
-                    ? -1
-                    : 1;
-                var scaleY = flipOrientation is PackIconFlipOrientation.Vertical or PackIconFlipOrientation.Both
-                    ? -1
-                    : 1;
+                var scaleX = flipOrientation is PackIconFlipOrientation.Horizontal or PackIconFlipOrientation.Both ? -1 : 1;
+                var scaleY = flipOrientation is PackIconFlipOrientation.Vertical or PackIconFlipOrientation.Both ? -1 : 1;
                 this.scaleTransform.ScaleX = scaleX;
                 this.scaleTransform.ScaleY = scaleY;
             }
@@ -146,8 +140,7 @@ namespace IconPacks.Avalonia.Core
         /// <summary>
         /// Identifies the Flip dependency property.
         /// </summary>
-        public static readonly StyledProperty<PackIconFlipOrientation> FlipProperty
-            = AvaloniaProperty.Register<PackIconControlBase, PackIconFlipOrientation>(nameof(Flip));
+        public static readonly StyledProperty<PackIconFlipOrientation> FlipProperty = AvaloniaProperty.Register<PackIconControlBase, PackIconFlipOrientation>(nameof(Flip));
 
         /// <summary>
         /// Gets or sets the flip orientation.
@@ -161,22 +154,22 @@ namespace IconPacks.Avalonia.Core
         /// <summary>
         /// Identifies the RotationAngle dependency property.
         /// </summary>
-        public static readonly StyledProperty<double> RotationAngleProperty
-            = AvaloniaProperty.Register<PackIconControlBase, double>(
-                nameof(RotationAngle),
-                0d,
-                false,
-                BindingMode.OneWay,
-                null,
-                (packIcon, value) =>
+        public static readonly StyledProperty<double> RotationAngleProperty = AvaloniaProperty.Register<PackIconControlBase, double>(
+            nameof(RotationAngle),
+            0d,
+            false,
+            BindingMode.OneWay,
+            null,
+            (packIcon, value) =>
+            {
+                if (value < 0)
                 {
-                    if (value < 0)
-                    {
-                        return 0d;
-                    }
+                    return 0d;
+                }
 
-                    return value > 360 ? 360d : value;
-                });
+                return value > 360 ? 360d : value;
+            }
+        );
 
         /// <summary>
         /// Gets or sets the rotation (angle).
@@ -191,8 +184,7 @@ namespace IconPacks.Avalonia.Core
         /// <summary>
         /// Identifies the Spin dependency property.
         /// </summary>
-        public static readonly StyledProperty<bool> SpinProperty
-            = AvaloniaProperty.Register<PackIconControlBase, bool>(nameof(Spin));
+        public static readonly StyledProperty<bool> SpinProperty = AvaloniaProperty.Register<PackIconControlBase, bool>(nameof(Spin));
 
         /// <summary>
         /// Gets or sets a value indicating whether the inner icon is spinning.
@@ -214,22 +206,16 @@ namespace IconPacks.Avalonia.Core
                 return;
             }
 
-            var animation = spinAnimation ?? new Animation
-            {
-                Children =
+            var animation =
+                spinAnimation
+                ?? new Animation
                 {
-                    new()
+                    Children =
                     {
-                        Cue = new(0),
-                        Setters = { new Setter(RotateTransform.AngleProperty, 0d) }
+                        new() { Cue = new(0), Setters = { new Setter(RotateTransform.AngleProperty, 0d) } },
+                        new() { Cue = new(1), Setters = { new Setter(RotateTransform.AngleProperty, 360d) } },
                     },
-                    new()
-                    {
-                        Cue = new(1),
-                        Setters = { new Setter(RotateTransform.AngleProperty, 360d) }
-                    }
-                }
-            };
+                };
 
             animation.Duration = TimeSpan.FromSeconds(this.SpinDuration);
             animation.Easing = this.SpinEasingFunction;
@@ -251,14 +237,14 @@ namespace IconPacks.Avalonia.Core
         /// <summary>
         /// Identifies the SpinDuration dependency property.
         /// </summary>
-        public static readonly StyledProperty<double> SpinDurationProperty
-            = AvaloniaProperty.Register<PackIconControlBase, double>(
-                nameof(SpinDuration),
-                1d,
-                false,
-                BindingMode.OneWay,
-                null,
-                (iconPack, value) => value < 0 ? 0d : value);
+        public static readonly StyledProperty<double> SpinDurationProperty = AvaloniaProperty.Register<PackIconControlBase, double>(
+            nameof(SpinDuration),
+            1d,
+            false,
+            BindingMode.OneWay,
+            null,
+            (iconPack, value) => value < 0 ? 0d : value
+        );
 
         /// <summary>
         /// Gets or sets the duration of the spinning animation (in seconds). This will also restart the spin animation.
@@ -273,10 +259,7 @@ namespace IconPacks.Avalonia.Core
         /// <summary>
         /// Identifies the SpinEasingFunction dependency property.
         /// </summary>
-        public static readonly StyledProperty<Easing> SpinEasingFunctionProperty
-            = AvaloniaProperty.Register<PackIconControlBase, Easing>(
-                nameof(SpinEasingFunction),
-                new LinearEasing());
+        public static readonly StyledProperty<Easing> SpinEasingFunctionProperty = AvaloniaProperty.Register<PackIconControlBase, Easing>(nameof(SpinEasingFunction), new LinearEasing());
 
         /// <summary>
         /// Gets or sets the EasingFunction of the spinning animation. This will also restart the spin animation.
@@ -288,8 +271,7 @@ namespace IconPacks.Avalonia.Core
             set { this.SetValue(SpinEasingFunctionProperty, value); }
         }
 
-        public static readonly StyledProperty<bool> SpinAutoReverseProperty
-            = AvaloniaProperty.Register<PackIconControlBase, bool>(nameof(SpinAutoReverse));
+        public static readonly StyledProperty<bool> SpinAutoReverseProperty = AvaloniaProperty.Register<PackIconControlBase, bool>(nameof(SpinAutoReverse));
 
         /// <summary>
         /// Gets or sets the AutoReverse of the spinning animation. This will also restart the spin animation.

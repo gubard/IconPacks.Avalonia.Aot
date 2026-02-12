@@ -18,7 +18,8 @@ namespace IconPacks.Avalonia.Core
 
     public static class PackIconExtensionHelper
     {
-        public static PackIconControlBase GetPackIcon<TPack, TKind>(this IPackIconExtension packIconExtension, TKind kind) where TPack : PackIconControlBase, new()
+        public static PackIconControlBase GetPackIcon<TPack, TKind>(this IPackIconExtension packIconExtension, TKind kind)
+            where TPack : PackIconControlBase, new()
         {
             var packIcon = new TPack();
             packIcon.SetKind(kind);
@@ -234,7 +235,7 @@ namespace IconPacks.Avalonia.Core
             Spin = 0x0010,
             SpinAutoReverse = 0x0020,
             SpinEasingFunction = 0x0040,
-            SpinDuration = 0x0080
+            SpinDuration = 0x0080,
         }
     }
 }

@@ -10,7 +10,8 @@ namespace IconPacks.Avalonia.Core
     [JsonSerializable(typeof(Dictionary<string, string>))]
     internal sealed partial class EnumDictionaryGenerationContext : JsonSerializerContext;
 
-    public static class PackIconDataFactory<TEnum> where TEnum : struct, Enum
+    public static class PackIconDataFactory<TEnum>
+        where TEnum : struct, Enum
     {
         public static Lazy<ReadOnlyDictionary<TEnum, string>> DataIndex { get; }
 

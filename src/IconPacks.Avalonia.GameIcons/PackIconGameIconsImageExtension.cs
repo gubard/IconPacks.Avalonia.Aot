@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.GameIcons
 {
     public class GameIconsImageExtension : BasePackIconImageExtension
     {
-        public GameIconsImageExtension()
-        {
-        }
+        public GameIconsImageExtension() { }
 
         public GameIconsImageExtension(PackIconGameIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconGameIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconGameIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

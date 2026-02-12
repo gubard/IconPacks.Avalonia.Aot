@@ -43,10 +43,12 @@ namespace IconPacks.Avalonia.Core.Converter
         {
             var transformGroup = new TransformGroup();
             transformGroup.Children.Add(this.GetScaleTransform(iconKind)); // scale
-            transformGroup.Children.Add(new ScaleTransform(
-                this.Flip is PackIconFlipOrientation.Horizontal or PackIconFlipOrientation.Both ? -1 : 1,
-                this.Flip is PackIconFlipOrientation.Vertical or PackIconFlipOrientation.Both ? -1 : 1
-            )); // flip
+            transformGroup.Children.Add(
+                new ScaleTransform(
+                    this.Flip is PackIconFlipOrientation.Horizontal or PackIconFlipOrientation.Both ? -1 : 1,
+                    this.Flip is PackIconFlipOrientation.Vertical or PackIconFlipOrientation.Both ? -1 : 1
+                )
+            ); // flip
             transformGroup.Children.Add(new RotateTransform(this.RotationAngle)); // rotate
 
             return transformGroup;
@@ -57,17 +59,9 @@ namespace IconPacks.Avalonia.Core.Converter
         /// </summary>
         protected virtual DrawingGroup GetDrawingGroup(object iconKind, IBrush foregroundBrush, string path)
         {
-            var geometryDrawing = new GeometryDrawing
-            {
-                Geometry = StreamGeometry.Parse(path),
-                Brush = foregroundBrush
-            };
+            var geometryDrawing = new GeometryDrawing { Geometry = StreamGeometry.Parse(path), Brush = foregroundBrush };
 
-            var drawingGroup = new DrawingGroup
-            {
-                Children = { geometryDrawing },
-                Transform = this.GetTransformGroup(iconKind)
-            };
+            var drawingGroup = new DrawingGroup { Children = { geometryDrawing }, Transform = this.GetTransformGroup(iconKind) };
 
             return drawingGroup;
         }
@@ -91,9 +85,7 @@ namespace IconPacks.Avalonia.Core.Converter
         /// <inheritdoc />
         protected override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is not Enum
-                ? null
-                : CreateImageSource(value, parameter as IBrush ?? this.Brush ?? Brushes.Black);
+            return value is not Enum ? null : CreateImageSource(value, parameter as IBrush ?? this.Brush ?? Brushes.Black);
         }
 
         /// <inheritdoc />

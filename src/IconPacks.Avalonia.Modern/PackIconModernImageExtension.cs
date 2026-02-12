@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.Modern
 {
     public class ModernImageExtension : BasePackIconImageExtension
     {
-        public ModernImageExtension()
-        {
-        }
+        public ModernImageExtension() { }
 
         public ModernImageExtension(PackIconModernKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconModernKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconModernKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

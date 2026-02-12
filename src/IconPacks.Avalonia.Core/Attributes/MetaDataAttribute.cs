@@ -8,9 +8,7 @@ namespace IconPacks.Avalonia.Core.Attributes
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public sealed class MetaDataAttribute : Attribute
     {
-        public MetaDataAttribute()
-        {
-        }
+        public MetaDataAttribute() { }
 
         public MetaDataAttribute(string name, string projectUrl, string licenseUrl)
         {

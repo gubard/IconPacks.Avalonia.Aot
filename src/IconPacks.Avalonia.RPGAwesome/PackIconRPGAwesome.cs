@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.RPGAwesome
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconRPGAwesomeKind> KindProperty
-            = AvaloniaProperty.Register<PackIconRPGAwesome, PackIconRPGAwesomeKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconRPGAwesomeKind> KindProperty = AvaloniaProperty.Register<PackIconRPGAwesome, PackIconRPGAwesomeKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

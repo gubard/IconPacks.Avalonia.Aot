@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.VaadinIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconVaadinIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconVaadinIcons, PackIconVaadinIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconVaadinIconsKind> KindProperty = AvaloniaProperty.Register<PackIconVaadinIcons, PackIconVaadinIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

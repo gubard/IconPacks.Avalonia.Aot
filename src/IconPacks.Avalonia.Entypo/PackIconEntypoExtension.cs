@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Entypo
 {
     public class EntypoExtension : BasePackIconExtension
     {
-        public EntypoExtension()
-        {
-        }
+        public EntypoExtension() { }
 
         public EntypoExtension(PackIconEntypoKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconEntypoKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconEntypoKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

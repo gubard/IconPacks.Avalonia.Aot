@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.VaadinIcons
 {
     public class VaadinIconsImageExtension : BasePackIconImageExtension
     {
-        public VaadinIconsImageExtension()
-        {
-        }
+        public VaadinIconsImageExtension() { }
 
         public VaadinIconsImageExtension(PackIconVaadinIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconVaadinIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconVaadinIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

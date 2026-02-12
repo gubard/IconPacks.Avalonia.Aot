@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.MemoryIcons
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconMemoryIconsKind> KindProperty
-            = AvaloniaProperty.Register<PackIconMemoryIcons, PackIconMemoryIconsKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconMemoryIconsKind> KindProperty = AvaloniaProperty.Register<PackIconMemoryIcons, PackIconMemoryIconsKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

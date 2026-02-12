@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Lucide
 {
     public class LucideExtension : BasePackIconExtension
     {
-        public LucideExtension()
-        {
-        }
+        public LucideExtension() { }
 
         public LucideExtension(PackIconLucideKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconLucideKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconLucideKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

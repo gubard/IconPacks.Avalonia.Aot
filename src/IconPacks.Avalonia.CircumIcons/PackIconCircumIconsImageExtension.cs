@@ -7,16 +7,15 @@ namespace IconPacks.Avalonia.CircumIcons
 {
     public class CircumIconsImageExtension : BasePackIconImageExtension
     {
-        public CircumIconsImageExtension()
-        {
-        }
+        public CircumIconsImageExtension() { }
 
         public CircumIconsImageExtension(PackIconCircumIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconCircumIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconCircumIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

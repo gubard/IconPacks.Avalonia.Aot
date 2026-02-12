@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.Codicons
 {
     public class CodiconsExtension : BasePackIconExtension
     {
-        public CodiconsExtension()
-        {
-        }
+        public CodiconsExtension() { }
 
         public CodiconsExtension(PackIconCodiconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconCodiconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconCodiconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

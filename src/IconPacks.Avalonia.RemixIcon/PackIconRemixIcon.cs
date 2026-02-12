@@ -17,8 +17,7 @@ namespace IconPacks.Avalonia.RemixIcon
             UpdateIconPseudoClasses(true, false, false);
         }
 
-        public static readonly StyledProperty<PackIconRemixIconKind> KindProperty
-            = AvaloniaProperty.Register<PackIconRemixIcon, PackIconRemixIconKind>(nameof(Kind));
+        public static readonly StyledProperty<PackIconRemixIconKind> KindProperty = AvaloniaProperty.Register<PackIconRemixIcon, PackIconRemixIconKind>(nameof(Kind));
 
         /// <summary>
         /// Gets or sets the icon to display.

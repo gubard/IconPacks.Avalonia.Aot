@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.EvaIcons
 {
     public class EvaIconsExtension : BasePackIconExtension
     {
-        public EvaIconsExtension()
-        {
-        }
+        public EvaIconsExtension() { }
 
         public EvaIconsExtension(PackIconEvaIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconEvaIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconEvaIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {

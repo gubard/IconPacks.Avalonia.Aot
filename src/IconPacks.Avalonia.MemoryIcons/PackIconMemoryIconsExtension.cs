@@ -6,16 +6,15 @@ namespace IconPacks.Avalonia.MemoryIcons
 {
     public class MemoryIconsExtension : BasePackIconExtension
     {
-        public MemoryIconsExtension()
-        {
-        }
+        public MemoryIconsExtension() { }
 
         public MemoryIconsExtension(PackIconMemoryIconsKind kind)
         {
             this.Kind = kind;
         }
 
-        [ConstructorArgument("kind")] public PackIconMemoryIconsKind Kind { get; set; }
+        [ConstructorArgument("kind")]
+        public PackIconMemoryIconsKind Kind { get; set; }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
