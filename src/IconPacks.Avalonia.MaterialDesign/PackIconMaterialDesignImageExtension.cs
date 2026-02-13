@@ -5,7 +5,7 @@ using IconPacks.Avalonia.Core;
 
 namespace IconPacks.Avalonia.MaterialDesign
 {
-    public class MaterialDesignImageExtension : BasePackIconImageExtension
+    public sealed class MaterialDesignImageExtension : BasePackIconImageExtension
     {
         public MaterialDesignImageExtension() { }
 

@@ -10,7 +10,7 @@ namespace IconPacks.Avalonia.MaterialDesign
     /// In accordance of <see><cref>https://github.com/marella/material-icons?tab=Apache-2.0-1-ov-file</cref></see>
     /// </summary>
     [MetaData("Material Icons (Google)", "https://github.com/marella/material-icons", "https://github.com/marella/material-icons?tab=Apache-2.0-1-ov-file")]
-    public class PackIconMaterialDesign : PackIconControlBase
+    public sealed class PackIconMaterialDesign : PackIconControlBase
     {
         public PackIconMaterialDesign()
         {

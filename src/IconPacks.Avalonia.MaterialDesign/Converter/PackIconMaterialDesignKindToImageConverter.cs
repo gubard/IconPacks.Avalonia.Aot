@@ -3,7 +3,7 @@ using IconPacks.Avalonia.Core.Converter;
 
 namespace IconPacks.Avalonia.MaterialDesign.Converter
 {
-    public class PackIconMaterialDesignKindToImageConverter : PackIconKindToImageConverterBase
+    public sealed class PackIconMaterialDesignKindToImageConverter : PackIconKindToImageConverterBase
     {
         /// <inheritdoc />
         protected override string GetPathData(object iconKind)
