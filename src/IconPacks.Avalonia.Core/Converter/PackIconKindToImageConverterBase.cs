@@ -55,7 +55,7 @@ namespace IconPacks.Avalonia.Core.Converter
         }
 
         /// <summary>
-        /// Gets the <see cref="T:System.Windows.Media.DrawingGroup" /> object that will be used for the <see cref="T:System.Windows.Media.DrawingImage" />.
+        /// Gets the <see cref="T:DrawingGroup" /> object that will be used for the <see cref="T:DrawingImage" />.
         /// </summary>
         protected virtual DrawingGroup GetDrawingGroup(object iconKind, IBrush foregroundBrush, string path)
         {
